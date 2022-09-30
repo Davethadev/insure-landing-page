@@ -234,13 +234,17 @@ footer {
     margin: 0 auto;
 }
 
-.footer-content .bg-pattern-footer-desktop {
+/* .footer-content .bg-pattern-footer-desktop {
     background: url('./images/bg-pattern-footer-desktop.svg') no-repeat center center;
     position: absolute;
     left: -12.5%;
     top: -35%;
     width: 25rem;
     height: 30rem;
+} */
+
+.footer-content {
+    background: url('./images/bg-pattern-footer-desktop.svg') no-repeat center center;
 }
 
 .footer-content {
@@ -333,12 +337,18 @@ footer {
 
     .header-mobile-links {
         display: block;
+        position: absolute;
+        z-index: 2;
         opacity: 0;
+        height: 100vh;
+        width: 100%;
+        background: url('./images/bg-pattern-mobile-nav.svg') no-repeat center center;
+        background-color: hsl(256, 26%, 12%);
     }
 
     .header-mobile-links.active {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateX(0);
     }
 
     .hamburger-icon.active {
@@ -348,8 +358,8 @@ footer {
     .header-mobile-links {
         text-align: center;
         padding-top: 2.5rem;
-        transform: translateY(-4px);
-        transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+        transform: translateX(-500px);
+        transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
     }
 
     .header-mobile-links a {
@@ -383,7 +393,8 @@ footer {
         width: 100%;
         margin: 0;
         position: absolute;
-        top: 22%;
+        z-index: 1;
+        /* top: 22%; */
         transform: translateY(-4px);
         transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
     }
